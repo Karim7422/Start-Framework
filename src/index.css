@@ -1,13 +1,161 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --main-dark: #2c3e50;
+  --very-dark: #1a252f;
+  --main-green: #1abc9c;
+  --main-white: #fff;
+  --hover-green: #1aba9fb5;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
+
+main {
+  min-height: 100vh;
+}
+
+nav.navbar {
+  background-color: var(--main-dark);
+  transition: 0.3s;
+}
+
+nav .nav-link.active {
+  background-color: var(--main-green);
+  border-radius: 10px;
+}
+
+.home,
+.about {
+  background-color: var(--main-green);
+}
+
+.avatar {
+  max-width: 250px;
+  height: 250px;
+}
+
+.homeContent span,
+.aboutContent span {
+  position: relative;
+
+}
+
+.homeContent span::before,
+.aboutContent span::before {
+  content: "";
+  position: absolute;
+  width: 102px;
+  height: 4px;
+  background-color: var(--main-white);
+  left: -115px;
+  top: 11px;
+
+}
+
+.homeContent span::after,
+.aboutContent span::after {
+  content: "";
+  position: absolute;
+  width: 102px;
+  height: 4px;
+  background-color: var(--main-white);
+  left: 30px;
+  top: 11px;
+
+}
+
+.contactContent,
+.portfolioContent {
+  color: var(--main-dark) !important;
+}
+
+.contactContent span,
+.portfolioContent span {
+  position: relative;
+  color: var(--main-dark) !important;
+}
+
+.contactContent span::before,
+.portfolioContent span::before {
+  content: "";
+  position: absolute;
+  width: 102px;
+  height: 4px;
+  background-color: var(--main-dark);
+  left: -115px;
+  top: 11px;
+
+}
+
+.contactContent span::after,
+.portfolioContent span::after {
+  content: "";
+  position: absolute;
+  width: 102px;
+  height: 4px;
+  background-color: var(--main-dark);
+  left: 30px;
+  top: 11px;
+
+}
+
+.contact form button {
+  background-color: var(--main-green);
+  color: var(--main-white);
+
+}
+
+.contact form button:hover {
+  background-color: transparent;
+  border: 1px solid var(--main-green);
+  color: var(--main-green);
+}
+
+.contact form input:focus {
+  box-shadow: 0px 0px 4px 1px #1abc9c;
+}
+
+.portfolio .container {
+  min-height: 145vh;
+}
+
+.portfolio .col>div {
+  position: relative;
+  cursor: pointer;
+}
+
+.portfolio .col>div .plus-icon {
+  background-color: var(--hover-green);
+  position: absolute;
+  inset: 0;
+  transition: 0.5s;
+  opacity: 0;
+}
+.portfolio .col>div:hover .plus-icon{
+  opacity: 1;
+}
+.viewer{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1abc9c45;
+}
+.viewer img{
+  max-width: 500px;
+}
+footer {
+  background-color: var(--main-dark);
+  color: var(--main-white);
+}
+
+footer .footer-bottom {
+  background-color: var(--very-dark);
 }
