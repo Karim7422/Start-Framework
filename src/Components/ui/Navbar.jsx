@@ -17,7 +17,7 @@ function Navbar() {
       <nav className="navbar navbar-expand-lg  fixed-top" style={{ padding }}>
         <div className="container">
           <NavLink
-            to="/"
+            to="/Start-Framework"
             className="navbar-brand text-white fw-bolder fs-2 text-uppercase"
           >
             Start Framework
@@ -37,7 +37,7 @@ function Navbar() {
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item mx-2">
                 <NavLink
-                  to="/about"
+                  to="/Start-Framework/about"
                   className="nav-link text-white fw-semibold"
                 >
                   ABOUT
@@ -45,7 +45,7 @@ function Navbar() {
               </li>
               <li className="nav-item mx-2">
                 <NavLink
-                  to="/portfolio"
+                  to="/Start-Framework/portfolio"
                   className={"nav-link text-white fw-semibold"}
                 >
                   PORTFOLIO
@@ -53,7 +53,7 @@ function Navbar() {
               </li>
               <li className="nav-item mx-2">
                 <NavLink
-                  to="/contact"
+                  to="/Start-Framework/contact"
                   className={"nav-link text-white fw-semibold"}
                 >
                   CONTACT
